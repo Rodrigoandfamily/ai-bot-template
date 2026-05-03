@@ -60,7 +60,7 @@ exports.handler = async (event) => {
       try {
         await fetch('https://https://dashboard-ai-bot.netlify.app/.netlify/functions/capture-lead', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer bot-template-key-2024' },
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'bottemplateanythingiwant$#@santymay9' },
           body: JSON.stringify({ clientId, clientName, leadName: userName, leadPhone: userPhone, tier, platform: 'website' })
         }).catch(e => console.log('Lead capture failed'));
       } catch(e) {}
