@@ -61,7 +61,7 @@ exports.handler = async (event) => {
           method: 'POST',
           headers: { 
             'Content-Type': 'application/json', 
-            'Authorization': 'Bearer bot-template-key-2024' 
+            'Authorization': 'bottemplateanythingiwant$#@santymay9' 
           },
           body: JSON.stringify({ clientId, clientName, leadName: userName, leadPhone: userPhone, tier, platform: 'website' })
         }).catch(e => console.log('Lead capture failed'));
