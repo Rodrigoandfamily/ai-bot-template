@@ -7,7 +7,7 @@ window.CLIENT_CONFIG = {
   leadCapture: {
     enabled: true,
     whatsappNumber: "56912345678",
-    dashboardWebhook: "https://dashboard-ai-bot.netlify.app/.netlify/functions/capture-lead"
+    dashboardWebhook: "https://dashboard-ai-bot.netlify.app.netlify/functions/capture-lead"
   },
   systemPrompt: "You are a friendly customer service agent. Be helpful and natural."
 };
