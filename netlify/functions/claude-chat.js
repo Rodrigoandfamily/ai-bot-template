@@ -1,9 +1,8 @@
 const { rateLimit, corsHeaders } = require('./auth');
 
 const MODEL_FALLBACK = [
-  { name: 'claude-opus-4-20250514', tier: 'enterprise' },
-  { name: 'claude-sonnet-4-20250514', tier: 'pro' },
-  { name: 'claude-3-5-sonnet-20241022', tier: 'pro' },
+  { name: 'claude-3-haiku-20240307', tier: 'enterprise' },
+  { name: 'claude-3-haiku-20240307', tier: 'pro' },
   { name: 'claude-3-haiku-20240307', tier: 'starter' }
 ];
 
@@ -53,14 +52,17 @@ exports.handler = async (event) => {
     }
     
     if (!response) {
-      response = "I'm having difficulties. Please click the WhatsApp button below! 💬";
+      response = "I'm here to help! What can I do for you today?";
     }
     
     if (userPhone && clientId) {
       try {
-        await fetch('https://https://dashboard-ai-bot.netlify.app/.netlify/functions/capture-lead', {
+        await fetch('https://dashboard-ai-bot.netlify.app/.netlify/functions/capture-lead', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Authorization': 'bottemplateanythingiwant$#@santymay9' },
+          headers: { 
+            'Content-Type': 'application/json', 
+            'Authorization': 'Bearer bot-template-key-2024' 
+          },
           body: JSON.stringify({ clientId, clientName, leadName: userName, leadPhone: userPhone, tier, platform: 'website' })
         }).catch(e => console.log('Lead capture failed'));
       } catch(e) {}
